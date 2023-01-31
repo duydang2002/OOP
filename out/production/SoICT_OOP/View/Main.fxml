@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="453.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SceneController">
+   <children>
+      <Pane prefHeight="453.0" prefWidth="122.0" style="-fx-background-color: Red;">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="122.0" layoutX="1.0" layoutY="227.0">
+               <image>
+                  <Image url="@../../../../OOP/2452579.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="CurrentCost" editable="false" layoutX="16.0" layoutY="32.0" prefHeight="26.0" prefWidth="92.0" />
+            <Text layoutX="26.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cost per m2" />
+            <TextField fx:id="CurrentCircle" editable="false" layoutX="15.0" layoutY="83.0" prefHeight="26.0" prefWidth="92.0" />
+            <Text layoutX="31.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Circle Fee" />
+            <TextField fx:id="CurrentTriangle" editable="false" layoutX="14.0" layoutY="145.0" prefHeight="26.0" prefWidth="92.0" />
+            <Text layoutX="26.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Triangle Fee" />
+         </children></Pane>
+<!--      <FontAwesomeIcon glyphName="USER_PLUS" layoutX="190.0" layoutY="74.0" onMouseClicked="#ThemHoaDon" size="30" />-->
+      <TableView fx:id="donHangTableView" layoutX="140.0" layoutY="155.0" prefHeight="283.0" prefWidth="711.0">
+        <columns>
+          <TableColumn fx:id="CusCol" text="CusName" />
+          <TableColumn fx:id="TimeCol" text="Time" />
+            <TableColumn fx:id="AddressCol" text="Address" />
+            <TableColumn fx:id="AreaCol" text="Area" />
+            <TableColumn fx:id="CostCol" text="Cost" />
+            <TableColumn fx:id="TypeCol" text="Type" />
+            <TableColumn fx:id="IDCol" text="ID" />
+            <TableColumn fx:id="editCol" />
+        </columns>
+      </TableView>
+      <FontAwesomeIcon glyphName="USER_PLUS" layoutX="140.0" layoutY="134.0" onMouseClicked="#ThemHoaDon" size="30" />
+      <FontAwesomeIcon glyphName="FILTER" layoutX="705.0" layoutY="134.0" onMouseClicked="#Filter" size="30" />
+      <FontAwesomeIcon fx:id="EditPrice" glyphName="PENCIL_SQUARE" layoutX="181.0" layoutY="136.0" onMouseClicked="#EditPriceButton" size="35" />
+      <TextField fx:id="FilterField" layoutX="483.0" layoutY="110.0" prefHeight="26.0" prefWidth="210.0" />
+      <ComboBox fx:id="SearchCBox" layoutX="324.0" layoutY="110.0" prefWidth="150.0" />
+      <FontAwesomeIcon glyphName="SEARCH" layoutX="765.0" layoutY="72.0" onMouseClicked="#Search" size="30" />
+      <FontAwesomeIcon glyphName="REFRESH" layoutX="225.0" layoutY="134.0" onMouseClicked="#loadTable" size="30" />
+      <TextField fx:id="CusNameSearch" layoutX="140.0" layoutY="52.0" prefHeight="26.0" prefWidth="188.0" promptText="Enter Name" />
+      <TextField fx:id="AddressSearch" layoutX="359.0" layoutY="52.0" prefHeight="26.0" prefWidth="210.0" promptText="Enter Address" />
+      <Text layoutX="140.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cus Name" />
+      <Text layoutX="359.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+      <Text layoutX="615.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" />
+      <ComboBox fx:id="TypeSearch" layoutX="614.0" layoutY="51.0" prefHeight="28.0" prefWidth="135.0" />
+   </children>
+</AnchorPane>
